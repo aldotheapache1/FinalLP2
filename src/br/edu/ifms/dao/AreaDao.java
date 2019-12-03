@@ -8,7 +8,6 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.List;
-import javax.swing.JOptionPane;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;

@@ -5,6 +5,8 @@
  */
 package br.edu.ifms.view;
 
+import br.edu.ifms.controller.CursoController;
+import br.edu.ifms.dao.CursoDao;
 import br.edu.ifms.model.AlunoModel;
 import javax.swing.JOptionPane;
 
@@ -12,6 +14,7 @@ import javax.swing.JOptionPane;
 public class AlunoView {
     public AlunoModel cadastrar(){
         AlunoModel aluno = new AlunoModel();
+
         
         aluno.setNome(JOptionPane.showInputDialog(null, "Informe o nome do aluno:"));
         aluno.setIdade(Integer.parseInt(JOptionPane.showInputDialog(null, "Informe a idade do aluno:")));

@@ -6,9 +6,15 @@
 package br.edu.ifms.model;
 
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
+import org.hibernate.annotations.Cascade;
+import org.hibernate.annotations.CascadeType;
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
 
 /**
  *
@@ -19,6 +25,12 @@ import javax.persistence.Table;
 @Table(name = "alunos")
 public class AlunoModel extends Pessoa {
     private long ra;
+    
+    @ManyToOne
+    @JoinColumn(name = "curso", insertable = true, updatable = true)
+    @Fetch(FetchMode.JOIN)
+    @Cascade(CascadeType.SAVE_UPDATE)
+    private CursoModel curso;
 
     public long getRa() {
         return ra;
@@ -26,6 +38,14 @@ public class AlunoModel extends Pessoa {
 
     public void setRa(long ra) {
         this.ra = ra;
+    }
+    
+    public CursoModel getCurso() {
+        return curso;
+    }
+
+    public void setCurso(CursoModel curso) {
+        this.curso = curso;
     }
     
     @Override

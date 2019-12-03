@@ -35,7 +35,7 @@ public class Main {
         
         while(opcao !=0){
                opcao = Integer.parseInt(JOptionPane.showInputDialog("Informe a opcão desejada:\n "
-                        + "1- para salvar;\n 2- para exibir todos;\n 3- remover;\n 4- buscar pelo Siape/RA da pessoa, ID da Area ou ID1 do Curso;\n 5- editar pelo RA/Siape/ID;\n 0-Parar programa."));
+                        + "1- para salvar;\n 2- para exibir todos;\n 3- remover;\n 4- buscar pelo Siape/RA da pessoa, ID da Area ou ID do Curso;\n 5- editar pelo RA/Siape/ID;\n 0-Parar programa."));
                 
                 switch (opcao) {
 
