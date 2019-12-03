@@ -5,7 +5,6 @@
  */
 package br.edu.ifms.view;
 
-import br.edu.ifms.controller.ProfessorController;
 import br.edu.ifms.model.ProfessorModel;
 import javax.swing.JOptionPane;
 

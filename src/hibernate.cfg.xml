@@ -48,7 +48,8 @@ Contributor(s):
     <property name="hibernate.hbm2ddl.auto">update</property>
     <mapping class="br.edu.ifms.model.AlunoModel"/>
     <mapping class="br.edu.ifms.model.AreaModel"/>
-    <mapping class="br.edu.ifms.model.ProfessorModel" file="" jar="" package="" resource=""/>
     <mapping class="br.edu.ifms.model.CursoModel"/>
+    <mapping class="br.edu.ifms.model.Pessoa"/>
+    <mapping class="br.edu.ifms.model.ProfessorModel"/>
   </session-factory>
 </hibernate-configuration>

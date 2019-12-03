@@ -36,7 +36,7 @@ public class CursoView {
     }
     
     public long buscar(){
-        return Long.parseLong(JOptionPane.showInputDialog( "Informe o id do Curso:", "Buscar Curso"));
+        return Long.parseLong(JOptionPane.showInputDialog( "Informe o id do Curso:"));
     }
     
     public void exibirDados(CursoModel curso){

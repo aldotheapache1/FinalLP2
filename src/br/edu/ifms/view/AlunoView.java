@@ -22,10 +22,10 @@ public class AlunoView {
     }
     
      public AlunoModel alterar(AlunoModel aluno){
-        aluno.setNome(JOptionPane.showInputDialog(null, "Informe o nome do aluno:", "Alterar Aluno"));
+        aluno.setNome(JOptionPane.showInputDialog(null, "Informe o nome do aluno:"));
         aluno.setIdade(Integer.parseInt(JOptionPane.showInputDialog(null, "Informe a idade do aluno:")));
-        aluno.setCpf(JOptionPane.showInputDialog(null, "Informe o CPF do aluno:", "Alterar Aluno"));
-        aluno.setSexo(JOptionPane.showInputDialog(null, "Informe o sexo do aluno:", "Alterar Aluno"));
+        aluno.setCpf(JOptionPane.showInputDialog(null, "Informe o CPF do aluno:"));
+        aluno.setSexo(JOptionPane.showInputDialog(null, "Informe o sexo do aluno:"));
         
         return aluno;
     }

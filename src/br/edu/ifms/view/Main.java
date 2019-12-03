@@ -9,33 +9,24 @@ import br.edu.ifms.controller.AlunoController;
 import br.edu.ifms.controller.AreaController;
 import br.edu.ifms.controller.CursoController;
 import br.edu.ifms.controller.ProfessorController;
-import br.edu.ifms.dao.AlunoDao;
-import br.edu.ifms.dao.AreaDao;
-import br.edu.ifms.dao.CursoDao;
-import br.edu.ifms.dao.ProfessorDao;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
 
 
 public class Main {
     public static void main(String[] args) throws SQLException {
-        AlunoDao alunoDao = new AlunoDao();
-        AlunoView alunoView = new AlunoView();
+        
         AlunoController  alunoController = new AlunoController();
         
-        ProfessorDao professorDao = new ProfessorDao();
-        ProfessorView professorView = new ProfessorView();
+       
         ProfessorController professorController = new ProfessorController();
         
-        CursoDao cursoDao = new CursoDao();
-        CursoView cursoView = new CursoView();
+      
         CursoController cursoController = new CursoController();
         
-        AreaDao areaDao = new AreaDao();
-        AreaView areaView = new AreaView();
+     
         AreaController areaController = new AreaController();
-        
-        String cpf = "";
+     
         int opcao = 1;
         
    
@@ -44,7 +35,7 @@ public class Main {
         
         while(opcao !=0){
                opcao = Integer.parseInt(JOptionPane.showInputDialog("Informe a opcão desejada:\n "
-                        + "1- para salvar;\n 2- para exibir todos;\n 3- remover;\n 4- buscar pelo Nome da pessoa ou id da area;\n 5- editar pelo RA/Siape/ID;\n 0-Parar programa."));
+                        + "1- para salvar;\n 2- para exibir todos;\n 3- remover;\n 4- buscar pelo Siape/RA da pessoa, ID da Area ou ID1 do Curso;\n 5- editar pelo RA/Siape/ID;\n 0-Parar programa."));
                 
                 switch (opcao) {
 
@@ -54,17 +45,17 @@ public class Main {
                         + "1- Aluno; \n2- Professor; \n3- Area; \n4- Curso."));
                     switch (opcao1) {
                         case 1: 
-                                alunoDao.salvarBD(alunoView.cadastrar());
+                                alunoController.salvar();
                              break;
                         case 2:  
-                                professorDao.salvarBD(professorView.cadastrar());
+                                professorController.salvar();
                              break;
                              
                         case 3:
-                            areaDao.salvarBD(areaView.inserirDadosArea());
+                            areaController.salvar();
                          
                         case 4:
-                            cursoDao.salvarBD(cursoView.cadastrar());
+                            cursoController.salvar();
                         default:  //voltar atrás
                              break;
                     }
